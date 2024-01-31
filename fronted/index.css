@@ -1,0 +1,297 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+a {
+    color: black;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*!<-------- Top Navbar ------> **/
+.topNav {
+    background-color: #eeeeee;
+    display: flex;
+    align-items: center;
+    /* position: fixed; */
+}
+
+.topNav >a > img {
+    max-width: 10rem;
+    margin: 0px 20px;
+}
+
+.topNav ul {
+    display: flex;
+    /* max-width: 50%; */
+    flex-wrap: wrap;
+}
+
+.topNav>ul>li {
+    margin: 5px 40px;
+}
+
+/* medium screen */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .topNav>ul>li {
+        margin: 5px 20px;
+    }
+    body {
+        background-color: pink;
+    }
+}
+
+/* small screen */
+@media all and (min-width:250px) and (max-width:767px) {
+    .topNav{
+        position: fixed;
+    }
+    .topNav>img {
+        max-width: 5rem;
+        margin: 0px 10px;
+    }
+    .topNav>ul>li {
+        margin: 5px 5px;
+    }
+    body {
+        background-color: cadetblue;
+    }
+}
+
+
+
+/* ! <---Second NavBar---> */
+.secondNav{
+    display: flex;
+    padding: 0.7rem;
+    justify-content: space-between;
+    /* background-color: aqua; */
+}
+.secondNav>form>input, .secondNav>form>button {
+font-size: large;
+
+}
+
+.categories >ul {
+    display: flex;
+    
+}
+
+.categories>ul>li{
+    margin: 0px 10px;
+}
+
+.login-cart > ul, .Second-Part {
+display: flex;
+
+}
+
+.login-cart>ul>li{
+margin: 0px 10px;
+}
+
+.chechbtn{
+    /* margin-left: 20px; */
+    font-size: larger;
+    float: right;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+}
+
+#check{
+    display: none;
+}
+/* Medium Screens */
+
+@media all and (min-width:768px) and (max-width:1024px){
+
+}
+
+/* Small Screens */
+
+
+
+@media all and (min-width:250px) and (max-width:767px){
+.chechbtn{
+    
+    display: block;
+    width: 100%;
+   font-weight: bold;
+   font-size: 40px;
+   position: fixed;
+   z-index: 2;
+   float: right;
+   background-color: #EEE;
+}
+.secondNav{
+    z-index: 1;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(61, 61, 61);
+    top: 40px;
+    left:-100%;
+    text-align: left;
+    transition:all 0.5s ;
+}
+#check:checked ~ .secondNav{
+    left: 0;
+}
+
+
+.Second-Part > form{
+    display: none;
+}
+.categories>ul, .Second-Part, .login-cart>ul{
+    flex-direction: column;
+   
+}
+.login-cart>ul>li {
+    margin: 10px 0px;
+}
+.categories>ul>li {
+    margin: 10px 0px;
+}
+}
+
+
+/*! <------------Carousel-----------> */
+.carousel {
+    background: #EEE;
+}
+
+.carousel-cell {
+    width: 500px;
+    height: 600px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+    z-index: 0;
+    background-position: left;
+    background-size: cover;
+        
+}
+
+/*! <-----Flex Box for some more photos-----> */
+
+.oneLineFlex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0px;
+}
+
+.oneLineFlex > img{
+    width: 100px;
+    height: 150px;
+    
+}
+
+/*! <----- Footer Section -----> */
+
+#footer{
+    height: 50vh;
+    width: 100%;
+    background-color: #181818;
+    padding: 50px 200px;
+    
+}
+#Flex-Part{
+display: flex;
+    justify-content: space-between;
+}
+
+#Flex-Part > div > h1{
+    color: #fdd835;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 52px;
+   
+}
+
+#Flex-Part> div >h2{
+    color: #fdd835;
+    font-size: 15px;
+}
+
+#Flex-Part>div > button{
+    background-color: #fdd835;
+    color: #181818;
+    padding: 0.4rem  1rem;
+    border: none;
+
+}
+
+#Flex-Partr>div>button:hover {
+    background-color: #333333;
+    color: #fdd835;
+    cursor: pointer;
+}
+
+#Flex-Part+div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#Flex-Part+div>div{
+    display: flex;
+   justify-content: space-around;
+  
+}
+
+#Flex-Part+div>div>div{
+    margin-right: 20px;
+}
+
+#Flex-Part+div>div>div~div{
+    margin-left: 20px;
+}
+
+#Flex-Part+div>div>div>h1 {
+    font-size: medium;
+    color: #eeeeee;
+    margin: 10px 0px;
+}
+
+#Flex-Part+div>div>div>h1~ul>li>a{
+    color: #eeeeeecb;
+}
+
+/* Medium Screens */
+
+@media all and (min-width:768px) and (max-width:1024px) {
+#footer {
+    height: auto;
+    padding: 30px 100px;
+    }
+}
+
+/* Small Screens */
+
+@media all and (min-width:250px) and (max-width:767px) {
+#footer {
+        height: auto;
+        width: 100%;
+        background-color: #181818;
+        padding: 10px 10px;
+
+    }
+}
+
+/** <------ Footer Section End ------> **/
+

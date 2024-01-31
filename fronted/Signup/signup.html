@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<link>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" type="text/css" href="signup.css" ></link>
+    <link rel="stylesheet" type="text/css" href="../index.css" ></link>
+</head>
+<body>
+    <!-- Top Nav -->
+    <div class="topNav">
+       <a href="../index.html"> <img src="../images/bagkoof-logo.png" alt="bavkoof-logo" /> </a>
+    
+        <ul>
+            <li><a href="#"> Github </a></li>
+            <li><a href="#">Leetcode</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Youtube</a></li>
+        </ul>
+    </div>
+    
+    <!-- second Nav Bar -->
+    <input type="checkbox" id="check" />
+    <label for="check" class="chechbtn">
+        <i class="fa-solid fa-bars "></i>
+    </label>
+    
+    <div class="secondNav">
+        <div class="categories">
+            <ul>
+                <li><a href="">Backpack</a></li>
+                <li><a href="">School Bags</a></li>
+                <li><a href="">Travel Bags</a></li>
+            </ul>
+        </div>
+    
+        <div class="Second-Part">
+            <form>
+                <input type="text" placeholder="search Bags..." />
+                <button type="submit">Search</button>
+            </form>
+    
+            <div class="login-cart">
+                <ul>
+                    <li> <a href="./signup.html">Sign Up</a></li>
+                    <li>Login</li>
+                    <li>Cart</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div style="border-bottom: 1px solid; margin-bottom: 10px;"></div>
+
+    <!-- Sign Up Page -->
+    
+    <div class="main-sign-up-box">
+        <div class="first-child-signup" >
+            <h1>Welcome to the world of Bagkoof®!</h1>
+            <div>
+                <img src="https://images.bewakoof.com/web/group-19-1617704502.png" alt="image-sign-up">
+            </div>
+        </div>
+<div>
+ <div class="second-child-signup" >
+    <h1>Sign up</h1>
+    <h2>for Latest trends, exciting offers and everything Bagkoof®!</h2>
+
+<!-- Sign Up Here -->
+ <form id="signUpForm" style="border: 2px solid green;" >
+    <label>Enter Name :
+        <input id="personName"  placeholder="Your Name" type="text">
+    </label>
+ 
+    <label>
+        Enter Email :
+        <input id="personEmail" placeholder="Your Email" type="text">
+    </label>
+
+    <Label>
+        Enter Password :
+        <input id="personPassword"  placeholder="Your Password"/>
+    </Label>
+    <button class="submit-sign-up-form" type="submit" >Register</button>
+</form>
+
+<!-- Login Here -->
+    <h1>Login</h1>
+
+    <div id="Login-Div" style="border: 2px solid green;" >
+        <label>Enter Email :
+            <input id="userEmail"  placeholder="Your Email" />
+        </label>
+        
+        <label>Enter Password :
+            <input id="userPassword" placeholder="Your Password" />
+        </label>
+        
+        <button class="submit-sign-up-form" id="loginBtn" >Login</button>
+    </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./signup.js" ></script>
+</body>
+</html>
