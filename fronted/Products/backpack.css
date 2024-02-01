@@ -1,0 +1,31 @@
+.main-products-div {
+    display: flex;
+    border: 3px solid seagreen;
+    margin: 10px 10rem;
+}
+
+.filters-box{
+    width: 40%;
+    border: 3px solid black;
+}
+
+.products-view-box{
+    width: 100%;
+    border: 3px solid firebrick;
+    
+}
+
+.products-view-box > div > img{
+    width: 100%;
+}
+.grid-products-box{
+    display: grid;
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(2, 50px);
+        gap: 20px 20px;
+       
+}
+
+.child{
+    background-color: chartreuse;
+}

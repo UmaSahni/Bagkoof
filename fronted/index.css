@@ -53,7 +53,8 @@ body {
 /* small screen */
 @media all and (min-width:250px) and (max-width:767px) {
     .topNav{
-        position: fixed;
+        /* position: fixed; */
+        display: none;
     }
     .topNav>img {
         max-width: 5rem;
