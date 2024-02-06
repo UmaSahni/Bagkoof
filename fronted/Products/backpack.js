@@ -12,5 +12,9 @@ const getProducts = () => {
 getProducts()
 
 function showProductsToDOM(products){
-
+    return (`
+    
+    
+    
+    `)
 }
