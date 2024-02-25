@@ -2,8 +2,8 @@ const getProducts = () => {
   fetch("http://localhost:8080/bags")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
-      const products = data.produts[0].products;
+      console.log(data.produts);
+      const products = data.produts;
       console.log(products);
       showProductsToDOM(products);
     })

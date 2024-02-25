@@ -1,6 +1,6 @@
 .main-products-div {
     display: flex;
-    border: 3px solid seagreen;
+    /* border: 3px solid seagreen; */
     margin: 10px 10rem;
 }
 
@@ -12,7 +12,7 @@
 
 .products-view-box {
     width: 100%;
-    border: 3px solid firebrick;
+    /* border: 3px solid firebrick; */
 
 }
 
@@ -59,7 +59,7 @@
 }
 
 .child {
-    background-color: chartreuse;
+    background-color: rgb(235, 235, 235);
 }
 
 
@@ -68,16 +68,17 @@
 @media all and (min-width: 768px) and (max-width: 1155px) {
     .main-products-div {
         display: flex;
-        background-color: red;
-        border: 6px solid seagreen;
+        /* background-color: red; */
+        border: 2px solid rgb(83, 83, 83);
         margin: 10px 1rem;
     }
 }
+
 @media all and (min-width:768px) and (max-width:1024px) {
     .main-products-div {
         display: flex;
-        background-color: red;
-        border: 6px solid seagreen;
+        /* background-color: red; */
+        /* border: 6px solid rgb(63, 63, 63); */
         margin: 10px 2rem;
     }
 
@@ -96,7 +97,7 @@
         position: relative;
         top: 3vh;
         display: flex;
-        background-color: red;
+        /* background-color: red; */
         border: 6px solid seagreen;
         margin: 10px 10px;
     }
