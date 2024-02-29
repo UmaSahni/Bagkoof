@@ -3,7 +3,7 @@ const getProducts = () => {
     .then((res) => res.json())
     .then((data) => {
       console.log(data.produts);
-      const products = data.produts;
+      const products = data.products;
       console.log(products);
       showProductsToDOM(products);
     })
