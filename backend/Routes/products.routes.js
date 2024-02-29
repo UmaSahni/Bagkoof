@@ -38,13 +38,10 @@ productRouter.get("/", async (req, res) => {
                         .skip((pageNumber - 1) * limit_Number)
                         .sort(sortOptions)
 
-    res.status(200).send({msg:"All Products", products:allProducts, totalPages, page:pageNumber})
-
-
-
+    res.status(200).json({success:true, msg:"All Products", products:allProducts, totalPages, page:pageNumber, CountProducts : allProducts.length })
 
   } catch (error) {
-    res.status(500).send({msg:"Error in server", error:error.msg})
+    res.status(500).json({success:false, msg:"Error in server", error:error.msg})
   }
 });
 
