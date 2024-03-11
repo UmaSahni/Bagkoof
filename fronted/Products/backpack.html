@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
+<script src="https://kit.fontawesome.com/f65b3aa48f.js" crossorigin="anonymous"></script>
 <!-- Hamburgur Icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
@@ -62,14 +63,63 @@
     <div style="border-bottom: 1px solid; margin-bottom: 10px;"></div>
 
     <!-- Backpack Page starts from here -->
-    
+
     <div class="main-products-div">
+
+        <!-- Filter Box -->
+
+
 
 
         <div id="filters-box">
-            <h1>Filters</h1>
+            <p>FILTERS</p>
+
+            <div class="accordian">
+                <div class="acc-header">
+                    <p>Category</p>
+                    <i  class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="acc-category">
+                    <ul class="filter-list" id="categories">
+                        <li>Backpack</li>
+                        <li>Sling Bag</li>
+                        <li>Fanny Bag</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="acc-header">
+                    <p>Design</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="acc-category">
+                <ul class="filter-list" id="desgin">
+                    <li>Graphic Print</li>
+                    <li>Printed</li>
+                    <li>Typography</li>
+                </ul>
+                </div>
+            </div>
+
+            <div class="accordian">
+                <div class="acc-header">
+                    <p>Material</p>
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+                <div class="acc-category">
+                    <ul class="filter-list" id="material">
+                        <li>Polyester</li>
+                        <li>Printed</li>
+                        <li>Typography</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
+
+
+        <!-- Show products in grid format -->
         <div class="products-view-box">
             <div>
                 <img src="https://images.bewakoof.com/uploads/category/desktop/insidebanner_desktop-bags-1705645835.jpg"

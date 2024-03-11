@@ -1,8 +1,17 @@
-const getProducts = () => {
-  fetch("http://localhost:8080/bags")
+const getProducts = (category=null, design=null) => {
+  let url = "http://localhost:8080/bags";
+
+  if (category) {
+    url += `?category=${category}`;
+  }
+  if(design){
+    url +=`?design=${design}`
+  }
+
+  fetch(url)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data.produts);
+      console.log(data.products);
       const products = data.products;
       console.log(products);
       showProductsToDOM(products);
@@ -35,3 +44,51 @@ function showProductsToDOM(products) {
 
   container.innerHTML = productsHTML;
 }
+
+
+/*
+! <---- Filters Functionalities ---->
+* 1. Catergory
+*/
+
+// Get the list of categories
+const categoriesList = document.getElementById('categories');
+
+// Add click event listener to each <li> element
+categoriesList.querySelectorAll('li').forEach(category => {
+    category.addEventListener('click', () => {
+    getProducts(category.textContent)
+        // console.log(category.textContent);
+    });
+});
+
+// * Design
+const designList = document.getElementById("desgin")
+
+designList.querySelectorAll("li").forEach(design => {
+  design.addEventListener("click", ()=>{
+    getProducts(null, design.textContent )
+    // console.log(design.textContent)
+  })
+})
+
+// * Material
+const materialList = document.getElementById("material")
+
+materialList.querySelectorAll("li").forEach(material =>{
+  material.addEventListener("click", ()=>{
+    getProducts(null, null, material.textContent)
+  })
+})
+
+// Accordian Logic
+
+let accordian = document.querySelectorAll(".accordian")
+
+accordian.forEach((el)=>{
+  const header = el.querySelector(".acc-header")
+console.log(header)
+  header.addEventListener("click",()=>{
+    el.querySelector(".acc-category").classList.toggle("active")
+  })
+})

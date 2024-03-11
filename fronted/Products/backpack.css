@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 .main-products-div {
     display: flex;
     /* border: 3px solid seagreen; */
@@ -109,4 +111,57 @@
         gap: 20px 20px;
     }
 
+}
+
+/* *Filter Box */
+
+#filters-box {
+    text-align: left;
+    padding: 2rem;
+}
+
+#filters-box>p {
+    color: #adadad;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.filter-list>li {
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin: 0.6rem;
+}
+
+
+/* Accordian For Filter box */
+.accordian {
+    padding: 1rem 1rem 0px 0rem;
+}
+
+.acc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333333;
+    font-weight: 500;
+}
+
+.acc-header>i {
+    color: #333333;
+
+}
+
+.acc-header:hover {
+    cursor: pointer;
+}
+
+.acc-category {
+    max-height: 0px;
+    overflow: hidden;
+    padding: 0.8rem;
+    border-bottom: 1px solid #333333;
+}
+
+.acc-category.active {
+    max-height: 500px;
 }
