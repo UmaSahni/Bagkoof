@@ -1,4 +1,4 @@
-const getProducts = (category=null, design=null) => {
+const getProducts = (category=null, design=null, material=null, color=null, sort=null) => {
   let url = "http://localhost:8080/bags";
 
   if (category) {
@@ -6,6 +6,18 @@ const getProducts = (category=null, design=null) => {
   }
   if(design){
     url +=`?design=${design}`
+  }
+
+  if(material){
+    url+=`?material=${material}`
+  }
+
+  if(color){
+    url+=`?color=${color}`
+  }
+
+  if(sort){
+    url+=`?sort=${sort}`
   }
 
   fetch(url)
@@ -81,7 +93,40 @@ materialList.querySelectorAll("li").forEach(material =>{
   })
 })
 
-// Accordian Logic
+// * Color Filter
+
+const colorList = document.getElementById("colorFilter")
+
+colorList.querySelectorAll("li").forEach((el)=>{
+  el.addEventListener("click", ()=>{
+    getProducts(null, null, null,el.textContent)
+  })
+})
+
+
+// * Sort By Price
+
+const sortPrice = document.getElementById("sort-price")
+
+sortPrice.querySelectorAll("li").forEach((el)=>{
+  el.addEventListener("click", ()=>{
+    let text = ""
+    if(el.textContent == "low to high"){
+      text = "asc"
+    }
+    else{
+      text="desc"
+    }
+    getProducts(null, null, null,null, text)
+  })
+})
+
+
+
+
+
+
+//! <--- Accordian Logic --->
 
 let accordian = document.querySelectorAll(".accordian")
 

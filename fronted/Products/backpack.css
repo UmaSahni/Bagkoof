@@ -3,6 +3,7 @@
 .main-products-div {
     display: flex;
     /* border: 3px solid seagreen; */
+   
     margin: 10px 10rem;
 }
 
@@ -21,6 +22,7 @@
 .products-view-box>div>img {
     width: 100%;
 }
+
 
 .grid-products-box {
     display: grid;
@@ -118,6 +120,8 @@
 #filters-box {
     text-align: left;
     padding: 2rem;
+
+
 }
 
 #filters-box>p {
