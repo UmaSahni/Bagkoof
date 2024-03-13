@@ -1,23 +1,29 @@
-const getProducts = (category=null, design=null, material=null, color=null, sort=null) => {
+const getProducts = (
+  category = null,
+  design = null,
+  material = null,
+  color = null,
+  sort = null
+) => {
   let url = "http://localhost:8080/bags";
 
   if (category) {
     url += `?category=${category}`;
   }
-  if(design){
-    url +=`?design=${design}`
+  if (design) {
+    url += `?design=${design}`;
   }
 
-  if(material){
-    url+=`?material=${material}`
+  if (material) {
+    url += `?material=${material}`;
   }
 
-  if(color){
-    url+=`?color=${color}`
+  if (color) {
+    url += `?color=${color}`;
   }
 
-  if(sort){
-    url+=`?sort=${sort}`
+  if (sort) {
+    url += `?sort=${sort}`;
   }
 
   fetch(url)
@@ -49,14 +55,30 @@ function showProductsToDOM(products) {
         <div class="flex-inside-child-div">
           <p>₹ ${product.price}</p>
           <p>${product.member_discount}</p>
+          <p class="id" style="display:none;">${product._id}</p>
         </div>
       </div>
     `;
   });
 
   container.innerHTML = productsHTML;
-}
 
+  // <--- Go to single page --->
+  let productsID = document.getElementById("products");
+  let child = productsID.querySelectorAll(".child");
+
+  child.forEach((el) => {
+    el.addEventListener("click", ()=>{
+      let id = el.querySelector(".id").innerText
+      console.log(id)
+      localStorage.setItem("product_id",id)
+      window.location.href = "./singlePage.html"
+    // console.log(el);
+    })
+    
+  });
+  console.log(child);
+}
 
 /*
 ! <---- Filters Functionalities ---->
@@ -64,76 +86,69 @@ function showProductsToDOM(products) {
 */
 
 // Get the list of categories
-const categoriesList = document.getElementById('categories');
+const categoriesList = document.getElementById("categories");
 
 // Add click event listener to each <li> element
-categoriesList.querySelectorAll('li').forEach(category => {
-    category.addEventListener('click', () => {
-    getProducts(category.textContent)
-        // console.log(category.textContent);
-    });
+categoriesList.querySelectorAll("li").forEach((category) => {
+  category.addEventListener("click", () => {
+    getProducts(category.textContent);
+    // console.log(category.textContent);
+  });
 });
 
 // * Design
-const designList = document.getElementById("desgin")
+const designList = document.getElementById("desgin");
 
-designList.querySelectorAll("li").forEach(design => {
-  design.addEventListener("click", ()=>{
-    getProducts(null, design.textContent )
+designList.querySelectorAll("li").forEach((design) => {
+  design.addEventListener("click", () => {
+    getProducts(null, design.textContent);
     // console.log(design.textContent)
-  })
-})
+  });
+});
 
 // * Material
-const materialList = document.getElementById("material")
+const materialList = document.getElementById("material");
 
-materialList.querySelectorAll("li").forEach(material =>{
-  material.addEventListener("click", ()=>{
-    getProducts(null, null, material.textContent)
-  })
-})
+materialList.querySelectorAll("li").forEach((material) => {
+  material.addEventListener("click", () => {
+    getProducts(null, null, material.textContent);
+  });
+});
 
 // * Color Filter
 
-const colorList = document.getElementById("colorFilter")
+const colorList = document.getElementById("colorFilter");
 
-colorList.querySelectorAll("li").forEach((el)=>{
-  el.addEventListener("click", ()=>{
-    getProducts(null, null, null,el.textContent)
-  })
-})
-
+colorList.querySelectorAll("li").forEach((el) => {
+  el.addEventListener("click", () => {
+    getProducts(null, null, null, el.textContent);
+  });
+});
 
 // * Sort By Price
 
-const sortPrice = document.getElementById("sort-price")
+const sortPrice = document.getElementById("sort-price");
 
-sortPrice.querySelectorAll("li").forEach((el)=>{
-  el.addEventListener("click", ()=>{
-    let text = ""
-    if(el.textContent == "low to high"){
-      text = "asc"
+sortPrice.querySelectorAll("li").forEach((el) => {
+  el.addEventListener("click", () => {
+    let text = "";
+    if (el.textContent == "low to high") {
+      text = "asc";
+    } else {
+      text = "desc";
     }
-    else{
-      text="desc"
-    }
-    getProducts(null, null, null,null, text)
-  })
-})
-
-
-
-
-
+    getProducts(null, null, null, null, text);
+  });
+});
 
 //! <--- Accordian Logic --->
 
-let accordian = document.querySelectorAll(".accordian")
+let accordian = document.querySelectorAll(".accordian");
 
-accordian.forEach((el)=>{
-  const header = el.querySelector(".acc-header")
-console.log(header)
-  header.addEventListener("click",()=>{
-    el.querySelector(".acc-category").classList.toggle("active")
-  })
-})
+accordian.forEach((el) => {
+  const header = el.querySelector(".acc-header");
+  // console.log(header)
+  header.addEventListener("click", () => {
+    el.querySelector(".acc-category").classList.toggle("active");
+  });
+});

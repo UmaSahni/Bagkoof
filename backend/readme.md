@@ -25,20 +25,21 @@ Authorization: Bearer YOUR_API_KEY
 ### Parameters
 
 - limit (optional)  
-  `http://localhost:8080/bags?limit=30`
+`http://localhost:8080/bags?limit=30`
 
 - Price sort (optional)  
-   - asc --> Ascending order - desc --> Descending order
-  `http://localhost:8080/bags?sort=desc`
+   - asc --> Ascending order 
+   - desc --> Descending order
+`http://localhost:8080/bags?sort=desc`
 
 - Page (optional)  
-  `http://localhost:8080/bags?page=2`
+`http://localhost:8080/bags?page=2`
 
 - category (optional)  
-  `http://localhost:8080/bags?category=Sling Bag`
+`http://localhost:8080/bags?category=Sling Bag`
 
 - material (optional)
-  `http://localhost:8080/bags?material=Polyester`
+`http://localhost:8080/bags?material=Polyester`
 
 - design (optional)
-  `http://localhost:8080/bags?design=Graphic Print`
+`http://localhost:8080/bags?design=Graphic Print`

@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+    font-family: "Montserrat", sans-serif;
+
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
 .main-products-div {
     display: flex;
     /* border: 3px solid seagreen; */
-   
+
     margin: 10px 10rem;
 }
 
@@ -168,4 +177,100 @@
 
 .acc-category.active {
     max-height: 500px;
+}
+
+/* <--- Single product page ---> */
+
+.container {
+    border: 1px solid red;
+    margin: 0.5rem 15%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container img {
+    width: 30rem;
+}
+
+.product-info {
+    border: 1px solid #333333;
+    width: 50%;
+    flex: 1;
+    padding: 1rem;
+}
+
+.product-info h2 {
+    font-size: 1.2rem;
+    color: #4f5362;
+}
+
+.product-info h1 {
+    font-size: 1rem;
+    color: #73737373;
+}
+
+#product-price h2 {
+    font-size: 1.5rem;
+}
+
+#product-price span {
+    font-size: 1rem;
+    color: #00b852;
+    font-weight: 500;
+}
+
+.quantity-box {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, .6);
+    display: flex;
+    /* border: 1px solid #00b852; */
+    width: 50%;
+}
+
+.quantity-box select {
+    width: 2rem;
+    /* border: 3px solid gold; */
+    flex: 1;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.rating-box {
+    border: 0.3px solid #949494;
+    width: fit-content;
+    padding: 0.2rem;
+    color: #303030;
+    font-weight: 600;
+    background-color: #F7F7F7F7;
+}
+
+.action-btn {
+    padding: 2rem 0rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-btn button {
+    width: 48%;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    background: transparent;
+    cursor: pointer;
+    border: 1px solid #d6d6d6;
+}
+
+.action-btn button:first-child {
+    background: #ffd84d;
+    border: 0px solid;
+}
+
+.action-btn button i {
+    font-size: large;
+    transform: translate(0px, 3px);
 }
